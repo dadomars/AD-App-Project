@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "date": "2025-08-16",
+      "athleteId": "davide",
+      "doms": 1,
+      "pains": "nessuno",
+      "notes": "no",
+      "pending": true,
+      "updatedAt": "2025-08-16T15:06:21.089Z",
+      "garmin": {
+        "sleepScore": 77,
+        "sleepDurationMin": 455,
+        "restingHr": 42,
+        "hrv": 60,
+        "bodyBattery": 88,
+        "trainingReadiness": 10,
+        "trainingStatus": "Maintaining",
+        "loadFocus": {
+          "anaerobic": 600,
+          "aerobicHigh": 400,
+          "aerobicLow": 300
+        }
+      },
+      "perception": {
+        "perceivedRecovery": "Buona",
+        "painLevel": 1,
+        "affectedAreas": [
+          "polpacci"
+        ],
+        "redFlag": true,
+        "guided": {
+          "area": "Coscia posteriore (ischiocrurali)",
+          "symptom": "Tensione",
+          "subtype": "Diffusa"
+        }
+      },
+      "analysis": {
+        "selfTest": "Valutazione funzionale specifica della zona",
+        "notes": "Dolore alto o red flag → priorità al controllo del sintomo. Recupero basso (sleep/TR): preferisci tecnica e mobilità; rinvia lavori intensi.",
+        "recommendedAction": "Riduci intensità al minimo: mobilità dolce + cammino. Se persiste/peggiora > 48h valuta consulto specialistico.",
+        "source": "fallback"
+      }
+    }
+  ]
+}
