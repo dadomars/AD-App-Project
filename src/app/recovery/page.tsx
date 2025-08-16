@@ -202,6 +202,52 @@ function startEdit(e: any) {
   // 5) chiudi l’eventuale pannello dettagli
   setDetailEntry(null);
 }
+function handleCancelEdit() {
+  resetForm();
+}
+
+function resetForm() {
+  // base
+  setDoms(null);
+  setPains("");
+  setNotes("");
+  // modalità e sonno manuale
+  setRecoveryInputMode("manual");
+  setSleepH(null);
+  setSleepM(null);
+  // garmin
+  setGSleepScore(null);
+  setGSleepHours(null);
+  setGSleepMinutes(null);
+  setGRestingHR(null);
+  setGHRV(null);
+  setGBodyBattery(null);
+  setGTrainingReadiness(null);
+  setGTrainingStatus("");
+  setGLoadAnaerobic(null);
+  setGLoadAerobicHigh(null);
+  setGLoadAerobicLow(null);
+  // percezione
+  setPPerc("");
+  setPPain(null);
+  setPAreas("");
+  setPRed(false);
+  setRedFlagTouched(false);
+  // guidata
+  setGAreaSel("");
+  setGSymSel("");
+  setGSubSel("");
+  // analisi
+  setASelf("");
+  setANotes("");
+  setAReco("");
+  setGenSource(null);
+  setLastStructured(null);
+  // stato editing / chooser
+  setEditingId(null);
+  setShowChooser(false);
+  setSelectedUA("");
+}
 
   // --- Garmin (opzionale)
 const [gSleepScore, setGSleepScore] = useState<number | null>(null);
@@ -462,10 +508,11 @@ async function save() {
     const j = await res.json();
     if (!res.ok) throw new Error(j?.error || `HTTP ${res.status}`);
 
-    setStatus("saved");
-    setEditingId(null);           // esci da edit mode
-    await reloadHistory();        // ricarica lista
-    setTimeout(() => setStatus("idle"), 1000);
+   setStatus("saved");
+await reloadHistory();        // aggiorna lista / tabella
+resetForm();                  // ⬅️ pulizia completa dei campi
+setTimeout(() => setStatus("idle"), 1000);
+
   } catch (e:any) {
     setErr(e?.message || "Errore");
     setStatus("error");
@@ -487,7 +534,9 @@ const res = await fetch("/api/recovery-keep", {
     const j = await res.json();
     if (!res.ok) throw new Error(j?.error || `HTTP ${res.status}`);
     setKeepStatus("done");
-    setShowChooser(false);    
+    setShowChooser(false);  
+    resetForm(); // chiude modal e pulisce lo stato locale
+  
     // ricarica elenco
     const ref = await fetch(`/api/recovery-day?date=${encodeURIComponent(date)}`, { cache: "no-store" });
 const jj = await ref.json();
@@ -706,6 +755,8 @@ const subOptions = useMemo<string[]>(() => {
 
         <div style={{ display:"flex", gap:8, alignItems:"center" }}>
           <button onClick={() => void save()} disabled={status==="saving"}>Salva</button>
+          <button onClick={resetForm} disabled={status==="saving"}>Reset</button>
+
           <span style={{ fontSize:14, opacity:.8 }}>
             Stato: {status === "idle" ? "—" : status}
           </span>
@@ -1053,7 +1104,7 @@ Red flag (richiede modifica allenamento)
 {isEditing && (
   <div style={{margin:"8px 0 12px", padding:"8px 10px", border:"1px dashed #999", borderRadius:8}}>
     Stai <b>modificando</b> la registrazione del {date}.
-    <button style={{marginLeft:8}} onClick={()=>setEditingId(null)}>Annulla modifica</button>
+    <button style={{marginLeft:8}} onClick={handleCancelEdit}>Annulla modifica</button>
   </div>
 )}
 
