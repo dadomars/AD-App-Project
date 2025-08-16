@@ -41,6 +41,35 @@
         "recommendedAction": "Riduci intensità al minimo: mobilità dolce + cammino. Se persiste/peggiora > 48h valuta consulto specialistico.",
         "source": "fallback"
       }
+    },
+    {
+      "date": "2025-08-15",
+      "athleteId": "davide",
+      "doms": 1,
+      "pains": "nessuno",
+      "notes": "",
+      "pending": true,
+      "updatedAt": "2025-08-16T15:26:45.532Z",
+      "garmin": {
+        "sleepScore": 100,
+        "sleepDurationMin": 0,
+        "hrv": 50
+      },
+      "perception": {
+        "perceivedRecovery": "Buona",
+        "painLevel": 5,
+        "affectedAreas": [],
+        "guided": {
+          "area": "Ginocchio",
+          "symptom": "Dolore anteriore",
+          "subtype": "Rotuleo"
+        }
+      },
+      "analysis": {
+        "selfTest": "Squat monopodalico, McMurray/Thessaly",
+        "recommendedAction": "Allenamento gestito: mobilità specifica, attivazione leggera; evita lavori esplosivi e impatti.",
+        "source": "fallback"
+      }
     }
   ]
 }
