@@ -1,0 +1,72 @@
+{
+  "HRmax": 185,
+  "HRrest": 42,
+  "Threshold": {
+    "HR": 169,
+    "Pace": "4:55",
+    "Power_w": 364
+  },
+  "Weight_kg": 76.5,
+  "Zones": [
+    {
+      "Zone": "Z1",
+      "Name": "Recovery",
+      "HR_min": 114,
+      "HR_max": 128,
+      "Pace_min_per_km": "7:05",
+      "Pace_max_per_km": ">7:05",
+      "Pace_min_per_km_clean": "7:05",
+      "Pace_min_sec": 425,
+      "Pace_max_per_km_clean": "7:05",
+      "Pace_max_sec": 425
+    },
+    {
+      "Zone": "Z2",
+      "Name": "Aerobic",
+      "HR_min": 128,
+      "HR_max": 142,
+      "Pace_min_per_km": "6:02",
+      "Pace_max_per_km": "7:05",
+      "Pace_min_per_km_clean": "6:02",
+      "Pace_min_sec": 362,
+      "Pace_max_per_km_clean": "7:05",
+      "Pace_max_sec": 425
+    },
+    {
+      "Zone": "Z3",
+      "Name": "Tempo",
+      "HR_min": 142,
+      "HR_max": 156,
+      "Pace_min_per_km": "5:36",
+      "Pace_max_per_km": "6:02",
+      "Pace_min_per_km_clean": "5:36",
+      "Pace_min_sec": 336,
+      "Pace_max_per_km_clean": "6:02",
+      "Pace_max_sec": 362
+    },
+    {
+      "Zone": "Z4",
+      "Name": "Threshold",
+      "HR_min": 156,
+      "HR_max": 171,
+      "Pace_min_per_km": "5:00",
+      "Pace_max_per_km": "5:35",
+      "Pace_min_per_km_clean": "5:00",
+      "Pace_min_sec": 300,
+      "Pace_max_per_km_clean": "5:35",
+      "Pace_max_sec": 335
+    },
+    {
+      "Zone": "Z5",
+      "Name": "VO2Max",
+      "HR_min": 171,
+      "HR_max": 185,
+      "Pace_min_per_km": "<4:55",
+      "Pace_max_per_km": "5:00",
+      "Pace_min_per_km_clean": "4:55",
+      "Pace_min_sec": 295,
+      "Pace_max_per_km_clean": "5:00",
+      "Pace_max_sec": 300
+    }
+  ]
+}

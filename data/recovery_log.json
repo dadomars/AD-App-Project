@@ -1,13 +1,116 @@
 {
+  "schema": 1,
   "entries": [
+    {
+      "date": "2025-08-11",
+      "athleteId": "davide",
+      "doms": 5.5,
+      "sleepHours": 2,
+      "sleepMinutes": 30,
+      "pains": "secondo",
+      "notes": "2",
+      "pending": false,
+      "updatedAt": "2025-08-11T20:18:38.041Z"
+    },
+    {
+      "date": "2025-08-12",
+      "athleteId": "davide",
+      "doms": 10,
+      "sleepHours": 0,
+      "sleepMinutes": 45,
+      "pains": "nessuno",
+      "notes": "ciao",
+      "pending": false,
+      "updatedAt": "2025-08-12T15:30:10.376Z",
+      "garmin": {
+        "sleepScore": 6,
+        "sleepDurationMin": 480,
+        "restingHr": 50,
+        "hrv": 55,
+        "bodyBattery": 90,
+        "trainingReadiness": 70,
+        "trainingStatus": "produttivo",
+        "loadFocus": {
+          "anaerobic": 70,
+          "aerobicHigh": 66,
+          "aerobicLow": 55
+        }
+      },
+      "perception": {
+        "perceivedRecovery": "Scarsa",
+        "painLevel": 5,
+        "affectedAreas": [
+          "schiena"
+        ]
+      }
+    },
+    {
+      "date": "2025-08-10",
+      "athleteId": "davide",
+      "doms": 5.5,
+      "sleepHours": 2,
+      "sleepMinutes": 15,
+      "pains": "ieri",
+      "notes": "yesterday",
+      "pending": false,
+      "updatedAt": "2025-08-14T14:38:36.856Z"
+    },
+    {
+      "date": "2025-08-14",
+      "athleteId": "davide",
+      "doms": 8,
+      "sleepHours": 6,
+      "sleepMinutes": 30,
+      "pains": "no",
+      "notes": "no",
+      "pending": false,
+      "updatedAt": "2025-08-14T20:02:32.934Z",
+      "garmin": {
+        "sleepScore": 100,
+        "sleepDurationMin": 390,
+        "restingHr": 40,
+        "hrv": 66,
+        "bodyBattery": 80,
+        "trainingReadiness": 87,
+        "trainingStatus": "Productive",
+        "loadFocus": {
+          "anaerobic": 78,
+          "aerobicHigh": 90,
+          "aerobicLow": 58
+        }
+      },
+      "perception": {
+        "perceivedRecovery": "Buona",
+        "painLevel": 0,
+        "affectedAreas": [
+          "nessuna"
+        ]
+      }
+    },
+    {
+      "date": "2025-08-09",
+      "athleteId": "davide",
+      "doms": 5,
+      "sleepHours": 7,
+      "sleepMinutes": 0,
+      "pains": "noon",
+      "notes": "nnnn",
+      "pending": false,
+      "updatedAt": "2025-08-14T21:34:59.026Z",
+      "garmin": {
+        "sleepDurationMin": 0
+      }
+    },
     {
       "date": "2025-08-16",
       "athleteId": "davide",
       "doms": 1,
+      "sleepHours": 7,
+      "sleepMinutes": 30,
       "pains": "nessuno",
       "notes": "no",
-      "pending": true,
-      "updatedAt": "2025-08-16T15:06:21.089Z",
+      "pending": false,
+      "updatedAt": "2025-08-16T13:25:33.786Z",
       "garmin": {
         "sleepScore": 77,
         "sleepDurationMin": 455,
@@ -28,47 +131,39 @@
         "affectedAreas": [
           "polpacci"
         ],
-        "redFlag": true,
         "guided": {
-          "area": "Coscia posteriore (ischiocrurali)",
-          "symptom": "Tensione",
-          "subtype": "Diffusa"
+          "area": "Ginocchio",
+          "symptom": "Dolore mediale",
+          "subtype": "Menisco mediale"
         }
       },
       "analysis": {
-        "selfTest": "Valutazione funzionale specifica della zona",
-        "notes": "Dolore alto o red flag → priorità al controllo del sintomo. Recupero basso (sleep/TR): preferisci tecnica e mobilità; rinvia lavori intensi.",
-        "recommendedAction": "Riduci intensità al minimo: mobilità dolce + cammino. Se persiste/peggiora > 48h valuta consulto specialistico.",
-        "source": "fallback"
+        "selfTest": "Autotest consigliati per Ginocchio: ROM attivo + palpazione mirata.",
+        "recommendedAction": "Allenamento consigliato: gestire ginocchio → dolore mediale → menisco mediale con mobilità leggera e carico progressivo."
       }
     },
     {
       "date": "2025-08-15",
       "athleteId": "davide",
       "doms": 1,
+      "sleepHours": 7,
+      "sleepMinutes": 15,
       "pains": "nessuno",
       "notes": "",
-      "pending": true,
-      "updatedAt": "2025-08-16T15:26:45.532Z",
+      "pending": false,
+      "updatedAt": "2025-08-16T13:26:01.343Z",
       "garmin": {
-        "sleepScore": 100,
-        "sleepDurationMin": 0,
-        "hrv": 50
+        "sleepDurationMin": 0
       },
       "perception": {
-        "perceivedRecovery": "Buona",
-        "painLevel": 5,
-        "affectedAreas": [],
-        "guided": {
-          "area": "Ginocchio",
-          "symptom": "Dolore anteriore",
-          "subtype": "Rotuleo"
-        }
+        "affectedAreas": [
+          "gomito",
+          "rigidità"
+        ]
       },
       "analysis": {
-        "selfTest": "Squat monopodalico, McMurray/Thessaly",
-        "recommendedAction": "Allenamento gestito: mobilità specifica, attivazione leggera; evita lavori esplosivi e impatti.",
-        "source": "fallback"
+        "selfTest": "Cozen (epicondilite), test flessori (epitrocleite)",
+        "recommendedAction": "Allenamento gestito: mobilità specifica, attivazione leggera, camminata; evita lavori esplosivi e impatti."
       }
     }
   ]

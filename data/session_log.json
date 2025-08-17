@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "sessions": [],
+  "entries": [
+    {
+      "date": "2025-08-10",
+      "athleteId": "davide",
+      "weight": 10,
+      "rpe": 6,
+      "manualTimeSec": 60,
+      "notes": "marameo",
+      "updatedAt": "2025-08-10T08:53:22.668Z"
+    }
+  ]
+}

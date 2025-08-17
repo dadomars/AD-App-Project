@@ -1,0 +1,130 @@
+{
+  "plan_version": 12,
+  "meta": {
+    "author": "o3",
+    "description": "Estate-FlexHM ACTIVE until 2025-08-31; Annual-Main v12 PENDING (start 2025-09-01). Adds session_kcal_targets, ramp_up_barbell, WOD matrix (Mon-Thu-Fri A-B-A), selection rules and timeline."
+  },
+  "selection_rules": {
+    "phase": "Use training_phase with status:'active' whose date range includes today. If none, use the last phase with status:'active'. 'pending' phases are ignored until manually activated."
+  },
+  "session_kcal_targets": {
+    "standard_min": 650,
+    "heavy_day_min": 500,
+    "hero_or_long_min": 800
+  },
+  "training_phases": [
+    {
+      "name": "Estate-FlexHM",
+      "status": "active",
+      "start": "2025-07-20",
+      "end": "2025-08-31",
+      "session_duration_min": 90,
+      "environment": "indoor_no_linear",
+      "skill_target": {
+        "name": "HS Hold libero",
+        "goal": "10\"",
+        "frequency_per_week": 3
+      },
+      "notes": "DB/KB only; vietati carry lineari; rotazione Metcon A-B-A; warm-up dedicati per ogni blocco."
+    },
+    {
+      "name": "Annual-Main v12",
+      "status": "pending",
+      "proposed_start": "2025-09-01",
+      "start": "2025-09-01",
+      "end": "2026-06-30",
+      "session_duration_min": 120,
+      "ramp_up_barbell": {
+        "weeks": 4,
+        "notes": "W1-2 @~70%; W3 75-80% + DL 3x5@60-65%; W4 deload 60% speed/pulls"
+      },
+      "weekly_structure": {
+        "Mon": "Clean & Jerk + Squat + Complementare + WOD + Rifinitura",
+        "Tue": "Ginnastica avanzata + Complementare forza upper + WOD tecnico",
+        "Wed": "Corsa tempo/intervalli 60′",
+        "Thu": "Snatch + Tirate/OHS + Complementare + WOD",
+        "Fri": "Ginnastica tecnica + Richiamo forza + Hero/Metcon tecnico",
+        "Sat": "REST completo (mobilità facolt.)",
+        "Sun": "Corsa lunga progressiva 60–90′"
+      },
+      "wod_rotation": {
+        "Mon": {
+          "type": "A",
+          "duration": "≤12′",
+          "desc": "Anaerobico intenso"
+        },
+        "Thu": {
+          "type": "B",
+          "duration": "15–20′",
+          "desc": "Aerobico alto / grinder"
+        },
+        "Fri": {
+          "type": "A",
+          "duration": "≤12′",
+          "desc": "Intenso o Hero/Long ogni 2–3 settimane (18–25′)"
+        }
+      },
+      "targets": {
+        "strength": {
+          "CJ_1RM": 105,
+          "Sn_1RM": 82.5,
+          "BackSQ_1RM": 130,
+          "FrontSQ_1RM": 112
+        },
+        "running": {
+          "10k_time_goal": "≤51:00",
+          "long_run": "60–90′ Z2"
+        },
+        "skills": [
+          "HS Walk/Hold",
+          "Strict RMU",
+          "Leg-less rope climb 3 reps"
+        ]
+      }
+    }
+  ],
+  "timeline": {
+    "2025-07-20": "Estate-FlexHM (active)",
+    "2025-09-01": "Annual-Main v12 (pending)"
+  },
+  "workflow_rules": {
+    "file_logic": "Always read recovery_log and session_log; fail if missing mandatory fields.",
+    "deload_logic": "Default deload every 4th week; ask user to advance/delay by ±1 week.",
+    "variety": "Avoid repeating same strength pattern or MetCon format within 3 sessions."
+  },
+  "changelog": [
+    {
+      "version": 12,
+      "date": "2025-08-07",
+      "author": "o3",
+      "scope": [
+        "plan_version",
+        "weekly_structure",
+        "training_phases",
+        "workflow_rules"
+      ],
+      "summary": "Created Annual‑Main winter plan starting 1‑Sep‑2025",
+      "files_modified": [
+        "master_plan.json",
+        "Manuale_Operativo_Davide_2025.docx"
+      ]
+    },
+    {
+      "version": 12,
+      "date": "2025-08-07",
+      "author": "o3",
+      "scope": [
+        "training_phases",
+        "session_kcal_targets",
+        "selection_rules",
+        "timeline",
+        "workflow_rules"
+      ],
+      "summary": "Added explicit phases with status (Estate active, Annual‑Main pending), kcal targets, WOD rotation A‑B‑A (Mon‑Thu‑Fri), ramp‑up barbell and selection rules.",
+      "files_modified": [
+        "master_plan.json",
+        "Manuale_Operativo_Davide_2025.docx"
+      ]
+    }
+  ]
+}

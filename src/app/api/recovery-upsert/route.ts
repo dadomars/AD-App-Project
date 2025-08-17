@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import fs from "node:fs/promises";
-import path from "node:path";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 
 const FILE = path.join(process.cwd(), "data", "recovery_log.json"); // adatta se serve
 
