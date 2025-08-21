@@ -1,1 +1,23 @@
 exit
+cd..
+docker exec -it mongo-adapp mongosh "mongodb://dado:mars@localhost:27017/admin?authSource=admin&directConnection=true"
+});
+  roles: [{ role: 'readWrite', db: 'adapp' }]
+  pwd: 'appsecret',
+  user: 'appuser',
+db = db.getSiblingDB('adapp');
+use admin
+exit
+cd C:\Progetti_app\AD-App-Project\pwa
+cd..
+docker exec -it mongo-adapp mongosh
+use admin
+exit
+db.runCommand({ connectionStatus: 1 })   // ok: 1
+})
+  roles: [{ role: 'readWrite', db: 'adapp' }]
+  pwd: 'appsecret',
+  user: 'appuser',
+db = db.getSiblingDB('adapp')
+use admin
+exit

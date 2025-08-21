@@ -1,6 +1,6 @@
 // pwa/pages/api/session/upsert.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import getMongoClient from "@/lib/db";
+import { getMongoClient } from "@/lib/db";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).end();

@@ -1,17 +1,26 @@
-// pwa/lib/db.ts
-// Client MongoDB con import dinamico (funziona anche se l'editor segna rosso sui tipi)
-const uri = process.env.MONGODB_URI as string;
-if (!uri) throw new Error("Missing MONGODB_URI");
+// pwa/src/lib/db.ts
+import { MongoClient as MongoClientCtor } from "mongodb";
 
-let clientPromise: Promise<any> | null = null;
+// Tipo istanza robusto anche con NodeNext
+type MongoClient = InstanceType<typeof MongoClientCtor>;
 
-export default async function getMongoClient() {
-  if (!clientPromise) {
-    clientPromise = (async () => {
-      const { MongoClient } = await import("mongodb");
-      const client = new MongoClient(uri, {});
-      return client.connect();
-    })();
-  }
-  return clientPromise; // Promise<MongoClient>
+let client: MongoClient | null = null;
+let connecting: Promise<MongoClient> | null = null;
+
+export async function getMongoClient(): Promise<MongoClient> {
+  if (client) return client;
+  if (connecting) return connecting;
+
+  const uri = process.env.MONGODB_URI;
+  if (!uri) throw new Error("MONGODB_URI mancante");
+
+  // Evitiamo annotazioni che triggerano l’errore
+  const c = new MongoClientCtor(uri);
+  connecting = c.connect().then(() => {
+    client = c;
+    connecting = null;
+    return c;
+  });
+
+  return connecting;
 }

@@ -12,12 +12,13 @@
     "busboy": "^1.6.0",
     "csv-parse": "^6.1.0",
     "fast-xml-parser": "^5.2.5",
-    "mongodb": "6",
+    "mongodb": "^6",
     "next": "15.4.6",
     "openai": "^5.12.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -30,5 +31,6 @@
     "eslint-config-next": "15.4.6",
     "ts-node": "^10.9.2",
     "typescript": "5.6.3"
-  }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }

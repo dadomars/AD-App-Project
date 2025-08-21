@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import getMongoClient from "../../../lib/db";
+import { getMongoClient } from "@/lib/db";
 
 function normalizeRecovery(body: any) {
   const fields = body.fields || {};

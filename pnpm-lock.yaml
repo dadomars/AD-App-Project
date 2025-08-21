@@ -18,14 +18,14 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       mongodb:
-        specifier: '6'
+        specifier: ^6
         version: 6.18.0
       next:
         specifier: 15.4.6
         version: 15.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       openai:
         specifier: ^5.12.2
-        version: 5.12.2
+        version: 5.12.2(zod@4.0.17)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -35,6 +35,9 @@ importers:
       xml2js:
         specifier: ^0.6.2
         version: 0.6.2
+      zod:
+        specifier: ^4.0.17
+        version: 4.0.17
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -1768,6 +1771,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@4.0.17:
+    resolution: {integrity: sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ==}
+
 snapshots:
 
   '@cspotcode/source-map-support@0.8.1':
@@ -3190,7 +3196,9 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
 
-  openai@5.12.2: {}
+  openai@5.12.2(zod@4.0.17):
+    optionalDependencies:
+      zod: 4.0.17
 
   optionator@0.9.4:
     dependencies:
@@ -3693,3 +3701,5 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@4.0.17: {}

@@ -1,5 +1,5 @@
 // pwa/src/scripts/upsert.ts
-import getMongoClient from "@/lib/db";
+import { getMongoClient } from "@/lib/db";
 
 export async function upsert(body: any) {
   const { _id, date, type = "Corsa", runMetrics, blocks, notes, source = "manual", status = "saved", calories_equivalent } = body;
